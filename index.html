@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SearchGitHub</title>
+	<link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css"> -->
+	<style>
+		body {
+			display: grid;
+			grid-template-rows: 70px 1fr auto;
+			min-height: 100vh;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+
+		.bg-light {
+			background-color: #eee !important;
+		}
+
+		.navbar {
+			background: #333;
+		}
+
+		.navbar .navbar-brand {
+			color: #fff;
+		}
+
+		.list-group-item {
+			display: flex !important;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar mb-3">
+		<div class="container">
+			<a href="/index.html" class="navbar-brand">SearchGitHub</a>
+		</div>
+	</nav>
+	<div class="container searchContainer mb-3">
+		<div class="search card card-body">
+			<h2>Search GitHub Users</h2>
+			<p class="lead">Enter a username to fetch user profile & repos from GitHub</p>
+			<input type="text" id="searchUser" class="form-control" placeholder="Username">
+			<br />
+			<div id="profile"></div>
+		</div>
+	</div>
+
+	<footer class="mt-5 p-3 text-center bg-light">SearchGitHub &copy;</footer>
+
+	<script src="./github.js"></script>
+	<script src="./ui.js"></script>
+	<script src="./app.js"></script>
+</body>
+
+</html>
